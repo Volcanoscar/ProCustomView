@@ -3,5 +3,5 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_simple_custiom_view">SimpleCustiomView</string>
+    <string name="title_activity_simple_custiom_view">Android自定义控件入门到精通</string>
 </resources>
