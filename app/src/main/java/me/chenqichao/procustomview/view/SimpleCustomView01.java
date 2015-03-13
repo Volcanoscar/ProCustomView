@@ -14,25 +14,25 @@ import android.view.View;
  * @see <a href="http://blog.csdn.net/aigestudio/article/details/41212583">http://blog.csdn.net/aigestudio/article/details/41212583</a>
  * Info: 自定义控件其实很简单系列
  */
-public class SimpleCustomView extends View {
+public class SimpleCustomView01 extends View {
 
     private Paint mPaint;
 
     //一般会这样写自定义View的初始化函数,当然不是绝对
 
     //动态创建View时调用，例如在Activity中使用这样代码：SimpleCustomView scv = new SimpleCustomView(context)
-    public SimpleCustomView(Context context) {
+    public SimpleCustomView01(Context context) {
         this(context, null);
     }
 
     //在xml中声明控件，则会自动调用第二个构造函数
-    public SimpleCustomView(Context context, AttributeSet attrs) {
+    public SimpleCustomView01(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
     //第三个函数系统是不调用的，要由View显式调用，比如在这里我们在第二个构造函数中调用了第三个构造函数。
     //第三个参数的意义就如同它的名字所说的，是默认的Style，这里的默认的Style是指它在当前Application或Activity所用的Theme中的默认Style
-    public SimpleCustomView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public SimpleCustomView01(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init();
     }

@@ -8,7 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import me.chenqichao.procustomview.activity.SimpleCustiomView;
+import me.chenqichao.procustomview.activity.SimpleCustomView;
 
 
 public class MainActivity extends ActionBarActivity implements AdapterView.OnItemClickListener {
@@ -31,7 +31,7 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         switch (position) {
             case 0:
-                startActivity(new Intent(MainActivity.this, SimpleCustiomView.class));
+                startActivity(new Intent(MainActivity.this, SimpleCustomView.class));
                 break;
         }
     }
