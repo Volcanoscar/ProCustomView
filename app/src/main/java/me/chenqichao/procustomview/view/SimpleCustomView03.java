@@ -39,6 +39,8 @@ public class SimpleCustomView03 extends View implements Runnable {
     public SimpleCustomView03(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init();
+
+        //获取自定义属性值
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.CircleViewAttrs);
         customRadius = (int)typedArray.getDimensionPixelSize(R.styleable.CircleViewAttrs_radius, 200);
         typedArray.recycle();
