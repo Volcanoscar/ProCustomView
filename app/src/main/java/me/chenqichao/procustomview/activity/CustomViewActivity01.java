@@ -6,11 +6,11 @@ import android.view.View;
 import android.widget.Button;
 
 import me.chenqichao.procustomview.R;
-import me.chenqichao.procustomview.view.SimpleCustomView01;
-import me.chenqichao.procustomview.view.SimpleCustomView02;
-import me.chenqichao.procustomview.view.SimpleCustomView03;
+import me.chenqichao.procustomview.view.view1.SimpleCustomView01;
+import me.chenqichao.procustomview.view.view1.SimpleCustomView02;
+import me.chenqichao.procustomview.view.view1.SimpleCustomView03;
 
-public class SimpleCustomView extends ActionBarActivity implements View.OnClickListener {
+public class CustomViewActivity01 extends ActionBarActivity implements View.OnClickListener {
 
     private SimpleCustomView01 scv01;
     private SimpleCustomView02 scv02;

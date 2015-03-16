@@ -10,8 +10,9 @@
 
     - Demo3:画一个自定半径属性的动态改变半径的圆形
 
+原文链接
 
-[《Android自定义控件其实很简单》系列博文Demo](http://blog.csdn.net/column/details/androidcustomview.html)
+ - [《Android自定义控件其实很简单》系列博文Demo](http://blog.csdn.net/column/details/androidcustomview.html)
 
-尊重原创转载请注明：From AigeStudio（http://blog.csdn.net/aigestudio）
+ - 尊重原创转载请注明：From AigeStudio（http://blog.csdn.net/aigestudio）
 

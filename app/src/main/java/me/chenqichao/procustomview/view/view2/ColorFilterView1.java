@@ -1,8 +1,10 @@
-package me.chenqichao.procustomview.view;
+package me.chenqichao.procustomview.view.view2;
 
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.ColorMatrix;
+import android.graphics.ColorMatrixColorFilter;
 import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
@@ -14,25 +16,25 @@ import android.view.View;
  * @see <a href="http://blog.csdn.net/aigestudio/article/details/41212583">http://blog.csdn.net/aigestudio/article/details/41212583</a>
  * Info: 自定义控件其实很简单系列
  */
-public class SimpleCustomView02 extends View implements Runnable {
+public class ColorFilterView1 extends View {
 
     private Paint mPaint;
+    private int radius = 200;
 
-    //一般会这样写自定义View的初始化函数,当然不是绝对
-
+    //一般会这样写自定义View的初始化函数,当然不是绝
     //动态创建View时调用，例如在Activity中使用这样代码：SimpleCustomView scv = new SimpleCustomView(context)
-    public SimpleCustomView02(Context context) {
+    public ColorFilterView1(Context context) {
         this(context, null);
     }
 
     //在xml中声明控件，则会自动调用第二个构造函数
-    public SimpleCustomView02(Context context, AttributeSet attrs) {
+    public ColorFilterView1(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
     //第三个函数系统是不调用的，要由View显式调用，比如在这里我们在第二个构造函数中调用了第三个构造函数。
     //第三个参数的意义就如同它的名字所说的，是默认的Style，这里的默认的Style是指它在当前Application或Activity所用的Theme中的默认Style
-    public SimpleCustomView02(Context context, AttributeSet attrs, int defStyleAttr) {
+    public ColorFilterView1(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init();
     }
@@ -48,8 +50,10 @@ public class SimpleCustomView02 extends View implements Runnable {
         //自定View初始化工作
         mPaint = new Paint();
         mPaint.setAntiAlias(true);
-        mPaint.setStyle(Paint.Style.STROKE);
-        mPaint.setColor(Color.RED);
+        mPaint.setStyle(Paint.Style.FILL);
+        mPaint.setColor(Color.argb(255, 255, 128, 103));
+        //设置彩色变换矩阵
+        mPaint.setColorFilter(new ColorMatrixColorFilter(getColorMatrix()));
         mPaint.setStrokeWidth(10);
     }
 
@@ -91,34 +95,12 @@ public class SimpleCustomView02 extends View implements Runnable {
         canvas.drawCircle(w / 2, h / 2, radius, mPaint);
     }
 
-    private int radius = 200;
-    private volatile boolean bStop = false;
-
-    @Override
-    public void run() {
-        while (!bStop) {
-            try {
-                if (radius >= 0) {
-                    radius -= 10;
-                    postInvalidate();
-                } else {
-                    radius = 200;
-                }
-                Thread.sleep(40);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
-    public void start() {
-        radius = 200;
-        this.bStop = false;
-        new Thread(this).start();
-    }
-
-    //自定义方法
-    public void stop() {
-        this.bStop = true;
+    private ColorMatrix getColorMatrix() {
+        return new ColorMatrix(new float[]{
+                0.5f, 0, 0, 0, 0,
+                0, 0.5f, 0, 0, 0,
+                0, 0, 0.5f, 0, 0,
+                0, 0, 0, 1, 0,
+        });
     }
 }

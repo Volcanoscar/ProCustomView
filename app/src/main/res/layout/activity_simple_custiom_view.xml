@@ -25,13 +25,13 @@
         android:layout_toRightOf="@id/btn_demo2"
         android:text="Demo3" />
 
-    <me.chenqichao.procustomview.view.SimpleCustomView01
+    <me.chenqichao.procustomview.view.view1.SimpleCustomView01
         android:id="@+id/scv01"
         android:layout_below="@id/btn_demo1"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <me.chenqichao.procustomview.view.SimpleCustomView02
+    <me.chenqichao.procustomview.view.view1.SimpleCustomView02
         android:id="@+id/scv02"
         android:visibility="gone"
 
@@ -39,7 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
-    <me.chenqichao.procustomview.view.SimpleCustomView03
+    <me.chenqichao.procustomview.view.view1.SimpleCustomView03
         android:id="@+id/scv03"
         app:radius="200dp"
         android:visibility="gone"

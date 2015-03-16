@@ -8,12 +8,15 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import me.chenqichao.procustomview.activity.SimpleCustomView;
+import me.chenqichao.procustomview.activity.CustomViewActivity01;
+import me.chenqichao.procustomview.activity.CustomViewActivity02;
 
 
 public class MainActivity extends ActionBarActivity implements AdapterView.OnItemClickListener {
 
-    private String[] activities = {"自定义控件01 - 简单View"};
+    private String[] activities = {
+            "自定义控件其实很简单1/12",
+            "自定义控件其实很简单1/6"};
     private ArrayAdapter<String> adapter;
     private ListView lv;
 
@@ -31,7 +34,10 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         switch (position) {
             case 0:
-                startActivity(new Intent(MainActivity.this, SimpleCustomView.class));
+                startActivity(new Intent(MainActivity.this, CustomViewActivity01.class));
+                break;
+            case 1:
+                startActivity(new Intent(MainActivity.this, CustomViewActivity02.class));
                 break;
         }
     }

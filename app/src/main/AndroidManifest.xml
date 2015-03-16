@@ -17,8 +17,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.SimpleCustomView"
+            android:name=".activity.CustomViewActivity01"
             android:label="@string/title_activity_simple_custiom_view" >
+        </activity>
+        <activity
+            android:name=".activity.CustomViewActivity02"
+            android:label="@string/title_activity_custom_view_activity02" >
+        </activity>
+        <activity
+            android:name=".activity.subactivity1.ColorFilterActivity"
+            android:label="@string/title_activity_color_filter" >
         </activity>
     </application>
 
