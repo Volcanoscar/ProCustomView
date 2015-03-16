@@ -6,6 +6,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.ColorMatrix;
 import android.graphics.ColorMatrixColorFilter;
+import android.graphics.LightingColorFilter;
 import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
@@ -129,8 +130,16 @@ public class ColorFilterView2 extends View {
                 invalidate();
                 break;
             case 7:
-                currentEffectId = 0;
                 mPaint.setColorFilter(new ColorMatrixColorFilter(getColorMatrix7()));
+                invalidate();
+                break;
+            case 8:
+                mPaint.setColorFilter(getLightColorFilter1());
+                invalidate();
+                break;
+            case 9:
+                currentEffectId = 0;
+                mPaint.setColorFilter(getLightColorFilter2());
                 invalidate();
                 break;
         }
@@ -204,5 +213,15 @@ public class ColorFilterView2 extends View {
                 -0.062f, -0.122f, 1.483f, 0, -0.02f,
                 0, 0, 0, 1, 0,
         });
+    }
+
+    //颜色过滤 - 去除绿色
+    private LightingColorFilter getLightColorFilter1() {
+        return new LightingColorFilter(0xFFFF00FF, 0x00000000);
+    }
+
+    //颜色过滤 - 变成黄色g'i
+    private LightingColorFilter getLightColorFilter2() {
+        return new LightingColorFilter(0xFFFFFFFF, 0x00FFFF00);
     }
 }
