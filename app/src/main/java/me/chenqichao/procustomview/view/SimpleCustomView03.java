@@ -109,7 +109,7 @@ public class SimpleCustomView03 extends View implements Runnable {
                     radius -= 10;
                     postInvalidate();
                 } else {
-                    radius = 200;
+                    radius = customRadius;
                 }
                 Thread.sleep(40);
             } catch (InterruptedException e) {
