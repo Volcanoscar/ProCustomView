@@ -89,9 +89,9 @@ public class PorterDuffXfermodeView extends View {
         }
 
         if (heightMode == MeasureSpec.EXACTLY) {
-            h = width;
+            h = height;
         } else if (widthMode == MeasureSpec.AT_MOST) {
-            h = Math.min(w, width);
+            h = Math.min(h, height);
         } else {
             //Mode:UNSPECIFIED 暂不处理
 

@@ -12,12 +12,13 @@ import me.chenqichao.procustomview.R;
 import me.chenqichao.procustomview.activity.subactivity1.ColorFilterActivity;
 import me.chenqichao.procustomview.activity.subactivity1.PorterDuffColorFilterActivity;
 import me.chenqichao.procustomview.activity.subactivity1.PorterDuffXfermodeActivity;
+import me.chenqichao.procustomview.activity.subactivity1.WhySoDiaoActivity;
 
 public class CustomViewActivity02 extends ActionBarActivity implements AdapterView.OnItemClickListener {
 
     private ListView lvDemo;
     private ArrayAdapter<String> adapter = null;
-    private String[] title = {"ColorFilterDemo", "PorterDuffColorFilterDemo", "PortDuffXfermodeDemo"};
+    private String[] title = {"ColorFilterDemo", "PorterDuffColorFilterDemo", "PortDuffXfermodeDemo", "GuaGuaKaDemo"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +41,9 @@ public class CustomViewActivity02 extends ActionBarActivity implements AdapterVi
                 break;
             case 2:
                 startActivity(new Intent(CustomViewActivity02.this, PorterDuffXfermodeActivity.class));
+                break;
+            case 3:
+                startActivity(new Intent(CustomViewActivity02.this, WhySoDiaoActivity.class));
                 break;
         }
     }

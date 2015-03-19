@@ -7,4 +7,5 @@
     <string name="title_activity_custom_view_activity02">CustomViewActivity02</string>
     <string name="title_activity_color_filter">ColorFilter</string>
     <string name="title_activity_porter_duff_color_filter">PorterDuffColorFilterActivity</string>
+    <string name="title_activity_why_so_diao">WhySoDiaoActivity</string>
 </resources>
