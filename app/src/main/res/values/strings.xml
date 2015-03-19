@@ -6,4 +6,5 @@
     <string name="title_activity_simple_custiom_view">Android自定义控件入门到精通</string>
     <string name="title_activity_custom_view_activity02">CustomViewActivity02</string>
     <string name="title_activity_color_filter">ColorFilter</string>
+    <string name="title_activity_porter_duff_color_filter">PorterDuffColorFilterActivity</string>
 </resources>

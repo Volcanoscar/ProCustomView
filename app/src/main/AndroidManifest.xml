@@ -28,6 +28,10 @@
             android:name=".activity.subactivity1.ColorFilterActivity"
             android:label="@string/title_activity_color_filter" >
         </activity>
+        <activity
+            android:name=".activity.subactivity1.PorterDuffColorFilterActivity"
+            android:label="@string/title_activity_porter_duff_color_filter" >
+        </activity>
     </application>
 
 </manifest>
