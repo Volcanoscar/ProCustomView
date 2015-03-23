@@ -35,6 +35,14 @@
             android:name=".activity.subactivity1.WhySoDiaoActivity"
             android:label="@string/title_activity_why_so_diao" >
         </activity>
+        <activity
+            android:name=".activity.CustomViewActivity03"
+            android:label="@string/title_activity_custom_view_activity03" >
+        </activity>
+        <activity
+            android:name=".activity.subactivity3.CustomViewActivity03Demo"
+            android:label="@string/title_activity_custon_view_activity03_demo" >
+        </activity>
     </application>
 
 </manifest>

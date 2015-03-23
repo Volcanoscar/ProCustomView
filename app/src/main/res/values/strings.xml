@@ -8,4 +8,9 @@
     <string name="title_activity_color_filter">ColorFilter</string>
     <string name="title_activity_porter_duff_color_filter">PorterDuffColorFilterActivity</string>
     <string name="title_activity_why_so_diao">WhySoDiaoActivity</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_custom_view_activity03">CustomViewActivity03</string>
+    <string name="title_activity_custon_view_activity03_demo">CustonViewActivity03Demo</string>
 </resources>

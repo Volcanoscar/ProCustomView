@@ -10,13 +10,15 @@ import android.widget.ListView;
 
 import me.chenqichao.procustomview.activity.CustomViewActivity01;
 import me.chenqichao.procustomview.activity.CustomViewActivity02;
+import me.chenqichao.procustomview.activity.CustomViewActivity03;
 
 
 public class MainActivity extends ActionBarActivity implements AdapterView.OnItemClickListener {
 
     private String[] activities = {
             "自定义控件其实很简单1/12",
-            "自定义控件其实很简单1/6"};
+            "自定义控件其实很简单1/6",
+            "自定义控件其实很简单1/4"};
     private ArrayAdapter<String> adapter;
     private ListView lv;
 
@@ -38,6 +40,9 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
                 break;
             case 1:
                 startActivity(new Intent(MainActivity.this, CustomViewActivity02.class));
+                break;
+            case 2:
+                startActivity(new Intent(MainActivity.this, CustomViewActivity03.class));
                 break;
         }
     }
