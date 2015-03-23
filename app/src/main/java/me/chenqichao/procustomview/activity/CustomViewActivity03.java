@@ -16,7 +16,7 @@ public class CustomViewActivity03 extends ActionBarActivity implements AdapterVi
 
     private ListView lvDemo;
     private ArrayAdapter<String> adapter = null;
-    private String[] title = {"FontMetricsDemo"};
+    private String[] title = {"FontMetricsDemo","BlurMaskFilterDemo"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,9 +32,14 @@ public class CustomViewActivity03 extends ActionBarActivity implements AdapterVi
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         switch (position) {
             case 0:
-                Intent intent = new Intent(CustomViewActivity03.this, CustomViewActivity03Demo.class);
-                intent.putExtra("demo", 0);
-                startActivity(intent);
+                Intent i1 = new Intent(CustomViewActivity03.this, CustomViewActivity03Demo.class);
+                i1.putExtra("demo", 0);
+                startActivity(i1);
+                break;
+            case 1:
+                Intent i2 = new Intent(CustomViewActivity03.this, CustomViewActivity03Demo.class);
+                i2.putExtra("demo", 1);
+                startActivity(i2);
                 break;
         }
     }

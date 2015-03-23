@@ -1,11 +1,13 @@
 package me.chenqichao.procustomview.activity.subactivity3;
 
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
 
 import me.chenqichao.procustomview.R;
+import me.chenqichao.procustomview.fragment.fragment03.BlurMaskFilterFragment;
 import me.chenqichao.procustomview.fragment.fragment03.Fragment03_01;
 
 public class CustomViewActivity03Demo extends ActionBarActivity {
@@ -21,12 +23,21 @@ public class CustomViewActivity03Demo extends ActionBarActivity {
     private void initFragment(int demo) {
         switch (demo) {
             case 0:
-                FragmentManager manager = getSupportFragmentManager();
-                FragmentTransaction transaction = manager.beginTransaction();
                 Fragment03_01 fragment03_01 = new Fragment03_01();
-                transaction.replace(R.id.fl_demo, fragment03_01);
-                transaction.commit();
+                Replace(fragment03_01);
                 break;
+            case 1:
+                BlurMaskFilterFragment blurMaskFilterFragment = new BlurMaskFilterFragment();
+                Replace(blurMaskFilterFragment);
+                break;
+
         }
+    }
+
+    private void Replace(Fragment fragment) {
+        FragmentManager manager = getSupportFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        transaction.replace(R.id.fl_demo, fragment);
+        transaction.commit();
     }
 }
